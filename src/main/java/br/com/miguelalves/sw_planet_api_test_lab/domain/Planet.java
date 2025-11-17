@@ -1,5 +1,7 @@
 package br.com.miguelalves.sw_planet_api_test_lab.domain;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -40,5 +42,10 @@ public class Planet {
     }
     public void setTerrain(String terrain) {
         this.terrain = terrain;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+       return EqualsBuilder.reflectionEquals(obj, this);
     }
 }
