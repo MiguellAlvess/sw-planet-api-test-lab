@@ -1,0 +1,38 @@
+package br.com.miguelalves.sw_planet_api_test_lab.domain;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "planets")
+public class Planet {
+
+    @Id
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String climate;
+    private String terrain;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getClimate() {
+        return climate;
+    }
+    public void setClimate(String climate) {
+        this.climate = climate;
+    }
+    public String getTerrain() {
+        return terrain;
+    }
+    public void setTerrain(String terrain) {
+        this.terrain = terrain;
+    }
+}
