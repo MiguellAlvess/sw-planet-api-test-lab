@@ -29,6 +29,8 @@ public class Planet {
         this.terrain = terrain;
     }    
 
+    public Planet() {}
+
     public Long getId() {
         return id;
     }
